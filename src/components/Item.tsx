@@ -1,4 +1,4 @@
-import "./Item.css";
+import './Item.css'
 
 export interface ItemProps {
   title: string;
@@ -6,11 +6,13 @@ export interface ItemProps {
   done: boolean;
 }
 
-export const Item = ({ title, description, done }: ItemProps) => {
+export type ItemData = ItemProps
+
+export function Item({ title, description, done }: ItemProps) {
   return (
-    <div className={done ? "done" : ""}>
-      <p className="title-name">{title}</p>
-      <p className="title-text">{description}</p>
-    </div>
-  );
-};
+    <li className={done ? 'item item--done' : 'item'}>
+      <p className="item__title"><strong>{title}</strong></p>
+      <p className="item__description">{description}</p>
+    </li>
+  )
+}
