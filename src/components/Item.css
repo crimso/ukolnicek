@@ -1,0 +1,8 @@
+.title-name {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.done {
+    text-decoration: line-through;
+}
